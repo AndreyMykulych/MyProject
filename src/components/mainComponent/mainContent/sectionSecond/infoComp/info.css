@@ -1,0 +1,26 @@
+.info-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.section {
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+.img-info {
+    width: 88%;
+    height: 100%;
+}
+.info-container > .section:nth-child(2),
+.info-container >.section:nth-child(4){
+    flex-direction: row-reverse;
+}
+.title-info{
+    margin:0;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+}

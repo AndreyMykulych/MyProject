@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Montserrat';
+    src :url('../fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype'),
+     url('../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype'),
+    url('../fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+    
+
+}
+
+.menu-item{
+    font-family:  'Montserrat',sans-serif;
+}
+.news-footer-title{
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

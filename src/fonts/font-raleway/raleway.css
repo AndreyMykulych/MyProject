@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Raleway';
+    src :url('./Raleway-VariableFont_wght.ttf') format('truetype')
+}
+
+.news-footer-title{
+    font-family: 'Raleway';
+    color: whitesmoke;
+    font-size: 5rem;
+    font-weight: 400;
+   }
+
+.title-info{
+    font-family: 'Raleway';
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.content-info{
+    font-family: 'Raleway';
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.description-info{
+    font-family: 'Raleway';
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.author-info {
+    font-family: 'Raleway';
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+}

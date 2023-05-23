@@ -1,0 +1,21 @@
+.menu {
+    position: absolute;
+    color: white;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    bottom: 0;
+    left: 25%;
+    list-style-type: none;
+    transition: opacity 0.3s ease;
+    font-weight: bolder;
+}
+ul>li:last-child{
+    background-image: url('./img/search.png');
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+}
+.menu :hover{
+    opacity: 0.8;
+}
