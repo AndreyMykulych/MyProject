@@ -1,0 +1,10 @@
+.main-Logo{
+    background-image: url('./img/mainLogo.png');
+    position: absolute;
+    background-repeat: no-repeat;
+   background-size: cover;
+  width: 5rem;
+  height: 5rem;
+  top:10%;
+  right:5%;
+}

@@ -1,0 +1,16 @@
+.tesla-page-container{
+    width: 100%;
+    height: 100%;
+ 
+}
+
+.tesla-logo{
+    
+    background-image: url('/public/tesla.jpg');
+    height: 15rem;
+    width: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}

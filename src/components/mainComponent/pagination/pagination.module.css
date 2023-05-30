@@ -1,0 +1,30 @@
+.pagination{
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+   
+   
+}
+ 
+.pagination >li {
+    display: inline-block;
+}
+.pagination >li >a  {
+    line-height: 3rem;
+    border-radius: 30px;
+    border: 1px solid black;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-right: 10px  ;
+    display: inline-block;
+    cursor: pointer;
+}
+li.selected  {
+    background-color: gray;
+    color: black;
+}
+.pagination >li :hover {
+    background-color: gray;
+    color: black;
+}

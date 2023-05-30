@@ -1,0 +1,15 @@
+.business-page-container{
+    width: 100%;
+    height: 100%;
+    
+}
+.business-logo{
+    
+    background-image: url('/public/business.png');
+    height: 20rem;
+    width: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+}
