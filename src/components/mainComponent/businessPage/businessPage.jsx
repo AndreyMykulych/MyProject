@@ -3,26 +3,27 @@ import './businessPage.css'
 
 import InfoComponent from '../mainContent/sectionSecond/infoComp/info'
 import { GetNewsBusiness } from '../../api/api';
+import Pagination from '../pagination/pagination';
 
 const Business = () => {
     const [businessData, setBusinessData] = useState(null);
-    let [isFetchingData,setIsFetchingData] = useState(true)
+    const [currentPage,setCurrentPage] = useState(1)
     
     useEffect(() => {
-        if (isFetchingData) {
-            GetNewsBusiness()
+         
+            GetNewsBusiness(currentPage)
                 .then((promise) => {
-                    setIsFetchingData(false)
                     setBusinessData(promise.articles)
                 })
             .catch((error)=>{console.log(error)})
-          }
-    },[])
+          
+    },[currentPage])
 
   return (
       <div className='business-page-container'>
           <div className="business-logo"></div>
-          <InfoComponent data={businessData} sliceIndex={8}/>
+          <InfoComponent data={businessData} />
+          <Pagination setCurrentPage={number =>  setCurrentPage(number) }/>
     </div>
   )
 }

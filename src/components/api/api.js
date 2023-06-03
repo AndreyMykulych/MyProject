@@ -9,7 +9,7 @@ export const GetNewsTesla = async ( currentPage ) => {
     return (
        
         await instance
-            .get(`https://newsapi.org/v2/everything?q=tesla&page=${currentPage}&pageSize=6&from=2023-04-30&sortBy=publishedAt&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`https://newsapi.org/v2/everything?q=tesla&from=2023-05-01&page=${currentPage}&pageSize=6&sortBy=publishedAt&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 
@@ -32,7 +32,7 @@ export  const GetNewsAppleMain = async () => {
     return (
        
         await instance
-            .get(`${link}q=apple&from=2023-05-20&to=2023-05-20&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`${link}q=apple&from=2023-05-31&to=2023-05-31&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 
@@ -46,11 +46,12 @@ export  const GetNewsAppleMain = async () => {
     )
         
 }
+
 export  const GetNewsApple = async (currentPage) => {
     return (
        
         await instance
-            .get(`${link}q=apple&from=2023-05-20&to=2023-05-20&sortBy=popularity&page=${currentPage}&pageSize=6&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`${link}q=apple&from=2023-05-31&to=2023-05-31&page=${currentPage}&pageSize=4&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 
@@ -65,11 +66,11 @@ export  const GetNewsApple = async (currentPage) => {
         
 }
 
-export  const GetNewsBusiness = async () => {
+export  const GetNewsBusiness = async (currentPage) => {
     return (
        
         await instance
-            .get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`https://newsapi.org/v2/top-headlines?country=us&page=${currentPage}&pageSize=1&category=business&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 
@@ -84,11 +85,11 @@ export  const GetNewsBusiness = async () => {
         
 }
 
-export  const GetNewsTech = async () => {
+export  const GetNewsTech = async (currentPage) => {
     return (
        
         await instance
-            .get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`https://newsapi.org/v2/top-headlines?country=us&page=${currentPage}&pageSize=6&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 
@@ -103,11 +104,11 @@ export  const GetNewsTech = async () => {
         
 }
 
-export  const GetNewsJournal = async () => {
+export  const GetNewsJournal = async (currentPage) => {
     return (
        
         await instance
-            .get(`https://newsapi.org/v2/everything?domains=wsj.com&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`https://newsapi.org/v2/everything?page=${currentPage}&pageSize=6&domains=wsj.com&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 

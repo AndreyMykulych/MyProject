@@ -3,8 +3,8 @@ import React from "react";
 import Menu from "../menu/menu";
 import Logos from "./logos/logos";
 
-import './header.css'
-
+import  './header.css'
+ 
 
 const Header = () => {
     return (

@@ -10,7 +10,7 @@ const InfoComponent = ({ data }) => {
         return  <div>Loading</div>
         
     }
-   
+   console.log(data.length)
      
     
     

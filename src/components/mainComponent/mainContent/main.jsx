@@ -16,7 +16,7 @@ const Main = () => {
     useEffect(() => {
         GetNewsAppleMain()
         .then((response) => {
-            setData2(response.articles)
+            setData1(response.articles)
            
                
         })
@@ -25,7 +25,7 @@ const Main = () => {
         
             GetNewsApple(currentPage)
                 .then((response) => {
-                    setData1(response.articles)
+                    setData2(response.articles)
                    
                        
                 })
@@ -37,8 +37,8 @@ const Main = () => {
   
     return (
         <div>
-            <Section1 data={data2}/>
-            <Section2 data={data1} />
+            <Section1 data={data1}/>
+            <Section2 data={data2} />
             <Pagination setCurrentPage={number =>setCurrentPage(number)} />
         </div>
     )

@@ -4,11 +4,11 @@
     list-style-type: none;
    
    
-}
+} 
  
 .pagination >li {
     display: inline-block;
-}
+} 
 .pagination >li >a  {
     line-height: 3rem;
     border-radius: 30px;
@@ -18,7 +18,7 @@
     text-align: center;
     margin-right: 10px  ;
     display: inline-block;
-    cursor: pointer;
+    cursor:pointer;
 }
 li.selected  {
     background-color: gray;

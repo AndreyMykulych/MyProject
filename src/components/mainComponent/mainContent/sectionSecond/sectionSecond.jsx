@@ -11,7 +11,7 @@ const Section2 = ({ data}) => {
             <Player />
             <InfoComponent data={data} sliceIndex={ 4}/>
         </div>
-    )
+    ) 
 }
 
 export default Section2;

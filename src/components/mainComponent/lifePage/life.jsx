@@ -1,28 +1,29 @@
 import React,{useEffect,useState} from 'react'
 import './life.css'
-
+ import Pagination from '../pagination/pagination'
 import { GetNewsJournal } from '../../api/api'
 import InfoComponent from '../mainContent/sectionSecond/infoComp/info'
 
 const Life = () => {
     const [lifeData, setLifeData] = useState(null);
-    let [isFetchingData,setIsFetchingData] = useState(true)
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
-        if (isFetchingData) {
-            GetNewsJournal()
+         
+            GetNewsJournal(currentPage)
                 .then((promise) => {
-                    setIsFetchingData(false)
+                   
                     setLifeData(promise.articles)
                 })
             .catch((error)=>{console.log(error)})
-          }
-    },[])
-
+          
+    },[currentPage])
+ 
   return (
       <div className='life-page-container'>
           <div className='life-logo'></div>
-          <InfoComponent data={lifeData} sliceIndex={8}/>
+          <InfoComponent data={lifeData}  />
+          <Pagination setCurrentPage={number=> setCurrentPage(number)} />
   </div>
   )
  }
