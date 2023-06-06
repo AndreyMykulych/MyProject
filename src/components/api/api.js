@@ -3,6 +3,7 @@ import axios from 'axios';
 
 
 const instance = axios.create();
+<<<<<<< HEAD
 const link = 'https://newsapi.org/v2/everything?';
 export const GetNewsTesla = async ( currentPage ) => {
  
@@ -10,6 +11,14 @@ export const GetNewsTesla = async ( currentPage ) => {
        
         await instance
             .get(`https://newsapi.org/v2/everything?q=tesla&from=2023-05-01&page=${currentPage}&pageSize=6&sortBy=publishedAt&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+=======
+
+export  const GetNewsTesla = async () => {
+    return (
+       
+        await instance
+            .get(`https://newsapi.org/v2/everything?q=tesla&from=2023-04-22&sortBy=publishedAt&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+>>>>>>> master
             .then((response) => {
                 return (response.data)
                 
@@ -23,6 +32,7 @@ export const GetNewsTesla = async ( currentPage ) => {
     )
         
 }
+<<<<<<< HEAD
     
     
         
@@ -109,6 +119,13 @@ export  const GetNewsJournal = async (currentPage) => {
        
         await instance
             .get(`https://newsapi.org/v2/everything?page=${currentPage}&pageSize=6&domains=wsj.com&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+=======
+export  const GetNewsApple = async () => {
+    return (
+       
+        await instance
+            .get(`https://newsapi.org/v2/everything?q=apple&from=2023-05-20&to=2023-05-20&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+>>>>>>> master
             .then((response) => {
                 return (response.data)
                 

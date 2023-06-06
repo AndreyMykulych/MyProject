@@ -8,6 +8,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+<<<<<<< HEAD
+=======
+    "normalize.css": "^8.0.1",
+>>>>>>> master
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-paginate": "^8.2.0",
