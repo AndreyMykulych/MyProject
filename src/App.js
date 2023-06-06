@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Header from './components/mainComponent/header'
 import Main from "./components/mainComponent/mainContent/main";
 import Footer from "./components/mainComponent/fotterComponent/footer";
@@ -8,39 +8,57 @@ import Business from "./components/mainComponent/businessPage/businessPage";
 import Tech from "./components/mainComponent/techPage/tech";
 import Life from "./components/mainComponent/lifePage/life";
 import { useDispatch, useSelector } from "react-redux";
-import { increment,decrement } from "./redux-toolkit/slices/firstSlice";
+import { increment, decrement } from "./redux-toolkit/slices/firstSlice";
+import Layout from "./components/layout";
+import { GetNewsTesla } from "./components/api/api";
+asd
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Layout />,
+        children: [
+            {
+                index:true,
+               
+                element: <Main />
+            
+            },
+            {
+                path: '/teslanews',
+                element: <Tesla />,
+                loader : GetNewsTesla
+            },
+            {
+                path: '/busnews',
+                element : <Business/>
+            },
+            {
+                path: '/technews',
+                element : <Tech/>
+            },
+            {
+                path: '/lifenews',
+                element : <Life/>
+            },
+        ]
+    },
+   
+])
+
 const App = () => {
-   const count=useSelector((state)=>state.countReducer.value)
-    const dispatch = useDispatch();
+        
     return (
-        <div>
-                <Header />
-            <Main />
+        <RouterProvider router={router}>
+        
+            {/* <Header />
+            <Main /> */}
             {/* <Tesla/> */}
             {/* <Business/> */}
             {/* <Tech/> */}
             {/* <Life/> */}
-                <Footer />
-            
-        </div>
+                {/* <Footer /> */}
+        </RouterProvider>
         
-        // <div>
-        
-        //   <button
-        //     aria-label="Increment value"
-        //     onClick={() => dispatch(increment())}
-        //   >
-        //     Increment
-        //   </button>
-        //   <span>{count}</span>
-        //   <button
-        //     aria-label="Decrement value"
-        //     onClick={() => dispatch(decrement())}
-        //   >
-        //     Decrement
-        //   </button>
-        // </div>
-      
     )
 }
 
