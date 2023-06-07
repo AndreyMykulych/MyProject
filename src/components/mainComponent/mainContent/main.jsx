@@ -31,7 +31,9 @@ const Main = () => {
                 })
             
                 .catch((error) => { console.log(error) });
-        }
+                window.scrollTo(0,1550)
+    }
+   
     , [currentPage])
    
   

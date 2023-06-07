@@ -5,11 +5,11 @@
 }
 .tech-logo{
     
-    background-image: url('/public/tech.svg');
+    background-image: url('/public/tech.png');
     height: 14rem;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     margin: 0 auto;
 }

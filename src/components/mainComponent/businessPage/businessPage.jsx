@@ -16,7 +16,7 @@ const Business = () => {
                     setBusinessData(promise.articles)
                 })
             .catch((error)=>{console.log(error)})
-          
+            window.scrollTo(0,228)
     },[currentPage])
 
   return (

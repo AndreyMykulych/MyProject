@@ -15,7 +15,7 @@ const Tesla= () => {
     
  
     useEffect(() => {
-        debugger
+       
            
                 GetNewsTesla(currentPage)
                     .then((promise) => {
@@ -32,7 +32,7 @@ const Tesla= () => {
     return (
         <div className="tesla-page-container">
             <div className="tesla-logo"></div>
-            <Pagination setCurrentPage={number =>setCurrentPage(number) }/>
+            
             <InfoComponent data={data}  />
             <Pagination setCurrentPage={number =>setCurrentPage(number) }/>
         </div>

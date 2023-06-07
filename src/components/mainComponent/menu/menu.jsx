@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import '../../../fonts/fonts.css'
 import './menu.css'
@@ -7,13 +8,23 @@ const Menu = () => {
     return (
         <div >
             <ul className="menu">
-                <li className="menu-item">NEWS</li>
-                <li className="menu-item">HISTORY</li>
-                <li className="menu-item">CULTURE</li>
-                <li className="menu-item">TECH</li>
-                <li className="menu-item">LIFE</li>
-                <li className="menu-item">OPINION</li>
-                <li></li>
+                <Link to='/' className="menu-item-link" >
+                    <li className="menu-item">apple news</li>
+                </Link>  
+                <Link to='/teslanews' className="menu-item-link">
+                    <li className="menu-item">tesla news</li>
+                </Link>   
+                <Link to='busnews' className="menu-item-link">
+                    <li className="menu-item">business news</li>
+                </Link>  
+                <Link to='/technews' className="menu-item-link">
+                    <li className="menu-item">tech news</li>
+                </Link>  
+                <Link to='/lifenews' className="menu-item-link">
+                    <li className="menu-item">life news</li>
+                </Link>  
+                
+                
             </ul>
         </div>
     )

@@ -3,38 +3,24 @@ import axios from 'axios';
 
 
 const instance = axios.create();
-<<<<<<< HEAD
+let date = new Date();
+
+let day = date.getDate();
+let year = date.getFullYear();
+let month = date.getMonth()
+
 const link = 'https://newsapi.org/v2/everything?';
-export const GetNewsTesla = async ( currentPage ) => {
+export const GetNewsTesla = async (currentPage) => {
  
     return (
-       
-        await instance
-            .get(`https://newsapi.org/v2/everything?q=tesla&from=2023-05-01&page=${currentPage}&pageSize=6&sortBy=publishedAt&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
-=======
-
-export  const GetNewsTesla = async () => {
-    return (
-       
-        await instance
-            .get(`https://newsapi.org/v2/everything?q=tesla&from=2023-04-22&sortBy=publishedAt&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
->>>>>>> master
-            .then((response) => {
-                return (response.data)
-                
-            })
-            
-            .catch((error) => {
-                console.log(error)
-                throw error
-            })
-    
-    )
         
+        await instance
+            .get(` https://newsapi.org/v2/everything?q=tesla&from=2023-05-07&page=${currentPage}&pageSize=6&sortBy=publishedAt&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .then((response) => {
+                return response.data
+            })
+    )
 }
-<<<<<<< HEAD
-    
-    
         
 
 
@@ -42,7 +28,7 @@ export  const GetNewsAppleMain = async () => {
     return (
        
         await instance
-            .get(`${link}q=apple&from=2023-05-31&to=2023-05-31&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`${link}q=apple&from=2023-05-31&to=${year}-${month}-${day}&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 
@@ -61,7 +47,7 @@ export  const GetNewsApple = async (currentPage) => {
     return (
        
         await instance
-            .get(`${link}q=apple&from=2023-05-31&to=2023-05-31&page=${currentPage}&pageSize=4&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
+            .get(`${link}q=apple&from=2023-05-31&to=${year}-${month}-${day}&page=${currentPage}&pageSize=4&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
             .then((response) => {
                 return (response.data)
                 
@@ -114,28 +100,14 @@ export  const GetNewsTech = async (currentPage) => {
         
 }
 
-export  const GetNewsJournal = async (currentPage) => {
+export const GetNewsJournal = async (currentPage) => {
     return (
        
         await instance
             .get(`https://newsapi.org/v2/everything?page=${currentPage}&pageSize=6&domains=wsj.com&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
-=======
-export  const GetNewsApple = async () => {
-    return (
-       
-        await instance
-            .get(`https://newsapi.org/v2/everything?q=apple&from=2023-05-20&to=2023-05-20&sortBy=popularity&apiKey=4119ab6dbccd4c25aee1ab5f4a28f3f3`)
->>>>>>> master
             .then((response) => {
-                return (response.data)
-                
+                return response.data
             })
-            
-            .catch((error) => {
-                console.log(error)
-                throw error
-            })
-    
     )
-        
 }
+

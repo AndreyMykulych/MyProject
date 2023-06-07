@@ -3,10 +3,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
     margin-bottom: 5rem;
-=======
->>>>>>> master
 }
 .section {
     display: flex;
@@ -14,33 +11,30 @@
     margin-bottom: 5rem;
 }
 .img-info {
-<<<<<<< HEAD
+
     width: 33rem;
     height: 100%;
 }
 
-=======
-    width: 88%;
-    height: 100%;
-}
+ 
 .info-container > .section:nth-child(2),
 .info-container >.section:nth-child(4){
     flex-direction: row-reverse;
 }
->>>>>>> master
+
 .title-info{
     margin:0;
+  
 }
 .info {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-   
+   justify-content: center;
+   text-align: start;
 }
 .more-info{
     text-align: center;
     text-decoration: none;
     color: black;
-=======
->>>>>>> master
+
 }

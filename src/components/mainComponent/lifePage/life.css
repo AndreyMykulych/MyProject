@@ -5,11 +5,11 @@
 }
 .life-logo{
     
-    background-image: url('/public/life.svg');
+    background-image: url('/public/life.jpg');
     height: 14rem;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     margin: 0 auto;
 }
