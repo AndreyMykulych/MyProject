@@ -9,7 +9,7 @@ import Tech from "./components/mainComponent/techPage/tech";
 import Life from "./components/mainComponent/lifePage/life";
 
 import Layout from "./components/layout";
-import { GetNewsTesla } from "./components/api/api";
+
 
 const router = createBrowserRouter([
     {
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/busnews',
-                element : <Business/>
+                element : <Business/>,
             },
             {
                 path: '/technews',
